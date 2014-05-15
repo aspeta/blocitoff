@@ -5,7 +5,7 @@ group :development, :test do
   gem 'capybara'
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'#
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
@@ -20,6 +20,9 @@ end
 group :development do
   gem 'sqlite3'
 end
+
+# bootstraop for css
+gem 'bootstrap-sass', '~> 3.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
