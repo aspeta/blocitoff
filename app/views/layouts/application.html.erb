@@ -8,6 +8,11 @@
 </head>
 <body>
 <p><%= flash[:notice] if flash[:notice] %></p>
+
+    <u1>
+        <li><%= link_to "Home", welcome_index_path %></li>
+        <li><%= link_to "About", welcome_about_path %></li>
+    </u1>    
 <%= yield %>
 
 </body>
