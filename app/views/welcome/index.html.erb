@@ -1,3 +1,24 @@
-<h1>Welcome to your todo list</h1>
-<p id="index-title">This is the home page for your todo list.</p>
+<br/>
+<div class="jumbotron">
+  <h1>Welcome to Your To Do List</h1>
+  <p>Blocitoff is a program that helps you track your to do list</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or 
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
 
+<div class="row">
+  <div class="col-md-4">
+    <h2>How does it work?</h2>
+    <p>Learn from thousands of users who have been able to take care of their todo list</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Complete Your To Do List.</h2>
+    <p>By Completing your to do list you will feel good and finish the items you have been meaning to take care of for a while</p>
+  </div>
+  <div class="col-md-4">
+    <h2>7 day removal!</h2>
+    <p>Blockitoff will remove to do items if they have not been touched for 7 days</p>
+  </div>
+</div>

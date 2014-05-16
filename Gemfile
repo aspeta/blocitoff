@@ -23,6 +23,12 @@ end
 
 # bootstraop for css
 gem 'bootstrap-sass', '~> 3.1.1'
+
+# adding devise for user authentication
+gem 'devise'
+
+# User Figaro to handle sensitive data
+gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
