@@ -1,5 +1,11 @@
 Blocitoff::Application.routes.draw do
   devise_for :users
+
+  resources :todos
+#  get "todos/index"
+  match "todos/add" => "todos#add", :via => :post
+  match 'todos/complete' => 'todos#complete', :via => :post
+
   get "welcome/index"
   get "welcome/about"
  

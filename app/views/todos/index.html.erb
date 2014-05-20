@@ -1,0 +1,30 @@
+<h1>Todo List</h1>
+ <%= form_for @new_todo, :url => { :action => "add" }  do |f|  %>
+    
+    <%= f.submit "Add to list", class: "btn btn-primary" %> <%= f.text_field  :descripton %>
+ <%end%>
+
+<%= form_tag("/todos/complete/", :method => "post") do %>
+<ul style="list-style-type:none;">
+
+<div class="row">
+  <div class="col-md-8">
+    <% @todos.each do |todo| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            
+               <% if todo.completed == true %>
+                 <li style="color:grey;">  <strike><%= todo.descripton %></strike> <%= check_box_tag  "todos_checkbox[]",todo.id %>  </li>
+            <% else %>
+                <li>  <%= todo.descripton %>  <%= check_box_tag  "todos_checkbox[]",todo.id %></li>
+            <% end %>
+          </h4>
+      </div>
+    <% end %> 
+  </div>
+
+</div>
+</ul>
+<%= submit_tag("Complete Todos", :class=>"btn btn-primary") %>
+<%end %>
