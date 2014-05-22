@@ -1,8 +1,7 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.all
+    @todos  = current_user.todos
     @new_todo=Todo.new
-
   end
 
   def new
@@ -16,14 +15,15 @@ class TodosController < ApplicationController
   end
 
   def add
-   todo = Todo.create(:descripton => params[:todo][:descripton])
-   unless todo.valid?
+    todo = current_user.todos.build(descripton: params[:todo][:descripton])
+    #todo = Todo.create(:descripton => params[:todo][:descripton])
+    if todo.save
+      flash[:success] = "Todo added successfully"
+    else  
      flash[:error] = todo.errors.full_messages.join("<br>").html_safe
-   else
-     #set flash[:success] to "Todo added successfully"   
-   end
-  redirect_to :action => 'index'
-end
+    end
+    redirect_to :action => 'index'
+  end
 
   def edit
     @todo = todo.find(params[:id])
@@ -66,7 +66,7 @@ end
   private
 
   def todo_params
-    params.require(:todo).permit(:description)
+    params.require(:todo).permit(:descripton)#, :user_id)
   end
 
 end

@@ -27,6 +27,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # adding devise for user authentication
 gem 'devise'
 
+# adding pundit for authorization and roles
+gem 'pundit'
 # User Figaro to handle sensitive data
 gem 'figaro'
 # Use SCSS for stylesheets

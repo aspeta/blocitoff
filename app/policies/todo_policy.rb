@@ -2,14 +2,19 @@
 class TodoPolicy < ApplicationPolicy
 
   def index?
-    true
+    user.present? && (record.user == user)
   end
 
   def create?
-    user.present? 
+    user.present? && (record.user == user)
   end
 
   def update?
     create?
+  end
+
+  def new?
+    @todo = Todo.new
+    authorize @todo
   end
 end

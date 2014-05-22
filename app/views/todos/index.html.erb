@@ -12,9 +12,8 @@
     <% @todos.each do |todo| %>
       <div class="media">
         <div class="media-body">
-          <h4 class="media-heading">
-            
-               <% if todo.completed == true %>
+          <h4 class="media-heading">    
+            <% if todo.completed == true %>
                  <li style="color:grey;">  <strike><%= todo.descripton %></strike> <%= check_box_tag  "todos_checkbox[]",todo.id %>  </li>
             <% else %>
                 <li>  <%= todo.descripton %>  <%= check_box_tag  "todos_checkbox[]",todo.id %></li>
