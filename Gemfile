@@ -29,6 +29,8 @@ gem 'devise'
 
 # adding pundit for authorization and roles
 gem 'pundit'
+# install whenever for scheduling
+gem 'whenever', :require => false
 # User Figaro to handle sensitive data
 gem 'figaro'
 # Use SCSS for stylesheets

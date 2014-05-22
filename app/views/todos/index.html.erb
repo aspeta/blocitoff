@@ -1,29 +1,40 @@
 <h1>Todo List</h1>
  <%= form_for @new_todo, :url => { :action => "add" }  do |f|  %>
-    
     <%= f.submit "Add to list", class: "btn btn-primary" %> <%= f.text_field  :descripton %>
  <%end%>
-
-<%= form_tag("/todos/complete/", :method => "post") do %>
+ <%= form_tag("/todos/complete/", :method => "post") do %>
 <ul style="list-style-type:none;">
-
-<div class="row">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+     <th>Task</th>
+     <th>Days left</th>
+     <th>Completed</th>
+    </tr>
+  </head>
   <div class="col-md-8">
     <% @todos.each do |todo| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">    
+          <h4 class="media-heading"> 
+
+               <tbody> 
+                 <tr>  
             <% if todo.completed == true %>
-                 <li style="color:grey;">  <strike><%= todo.descripton %></strike> <%= check_box_tag  "todos_checkbox[]",todo.id %>  </li>
+                 <li style="color:grey;"> 
+                  <td> <strike><%= todo.descripton %></strike></td>
+                  <td> <strike><%= (7-((Time.now - todo.created_at)/86400)).round %></strike></td>
+                  <td><strike><%= check_box_tag  "todos_checkbox[]",todo.id %></strike></td> </li>
             <% else %>
-                <li>  <%= todo.descripton %>  <%= check_box_tag  "todos_checkbox[]",todo.id %></li>
+                <li>
+                  <td><%= todo.descripton %></td>
+                  <td><%= (7-((Time.now - todo.created_at)/86400)).round%></td> 
+                  <td><%= check_box_tag  "todos_checkbox[]",todo.id %></td></li>
             <% end %>
+               </tbody> 
           </h4>
-      </div>
     <% end %> 
   </div>
 
-</div>
+</table>
 </ul>
 <%= submit_tag("Complete Todos", :class=>"btn btn-primary") %>
 <%end %>
