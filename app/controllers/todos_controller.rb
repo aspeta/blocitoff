@@ -9,6 +9,15 @@ class TodosController < ApplicationController
     authorize @todo
   end
 
+  def destroy
+    @todo =current_user.todos
+    if todo.created_at > 7.days 
+      flash[:success]= "Delete the 7 day or older tasks"
+    else
+      flash[:error] = "No task to delete that is older than 7 days!"
+    end
+    redirect_to :action => 'index'
+  end
   def show
     @todo = todo.find(params[:id])
     authorize @todo

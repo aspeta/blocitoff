@@ -18,7 +18,10 @@
 
                <tbody> 
                  <tr>  
-            <% if todo.completed == true %>
+            <% if todo.completed == true%>
+                <% if ((7-((Time.now - todo.created_at)/86400)).round < 0 ) %>
+                <% else %>
+                <% end%>
                  <li style="color:grey;"> 
                   <td> <strike><%= todo.descripton %></strike></td>
                   <td> <strike><%= (7-((Time.now - todo.created_at)/86400)).round %></strike></td>
@@ -33,7 +36,7 @@
           </h4>
     <% end %> 
   </div>
-
+     
 </table>
 </ul>
 <%= submit_tag("Complete Todos", :class=>"btn btn-primary") %>
