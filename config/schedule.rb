@@ -18,3 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+every 24.hours do
+  bundle exec rake delete_items
+end
