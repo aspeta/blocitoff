@@ -1,0 +1,22 @@
+total 38
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 15 19:39 .
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 15 18:28 ..
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 11 23:00 app
+drwxrwxrwx 1 vagrant vagrant    0 Sep 11 23:00 bin
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 11 23:00 config
+-rwxrwxrwx 1 vagrant vagrant  154 Sep 11 23:00 config.ru
+drwxrwxrwx 1 vagrant vagrant    0 Sep 11 23:00 db
+-rwxrwxrwx 1 vagrant vagrant 1671 Sep 11 23:00 Gemfile
+-rwxrwxrwx 1 vagrant vagrant 4126 Sep 11 23:00 Gemfile.lock
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 15 19:39 .git
+-rwxrwxrwx 1 vagrant vagrant  526 Sep 11 23:00 .gitignore
+drwxrwxrwx 1 vagrant vagrant    0 Sep 11 23:00 lib
+drwxrwxrwx 1 vagrant vagrant    0 Sep 11 23:00 log
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 11 23:00 public
+-rwxrwxrwx 1 vagrant vagrant  254 Sep 11 23:00 Rakefile
+-rwxrwxrwx 1 vagrant vagrant  612 Sep 11 23:00 README.md
+-rwxrwxrwx 1 vagrant vagrant    8 Sep 11 23:00 .rspec
+drwxrwxrwx 1 vagrant vagrant 4096 Sep 11 23:00 spec
+-rwxrwxrwx 1 vagrant vagrant    0 Sep 15 19:39 test3.txt
+-rwxrwxrwx 1 vagrant vagrant    0 Sep 15 19:40 test4.txt
+drwxrwxrwx 1 vagrant vagrant    0 Sep 11 23:00 vendor
